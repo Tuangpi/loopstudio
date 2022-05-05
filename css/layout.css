@@ -1,0 +1,87 @@
+body {
+  font-family: "Josefin Sans", Alata, monospace;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+nav {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(/images/desktop/image-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: auto;
+  min-height: 100vh;
+}
+nav div {
+  max-width: var(--box-width);
+  margin: auto;
+}
+nav div ul {
+  font-family: Alata, monospace;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1.5rem;
+  color: var(--white);
+}
+nav div ul .logo {
+  background-image: url(/images/logo.svg);
+}
+nav div ul li {
+  list-style: none;
+  font-weight: 800;
+}
+nav div ul li:nth-of-type(1) {
+  margin-right: auto;
+  width: 192px;
+  height: 32px;
+}
+nav div .text-box {
+  margin-left: 0;
+  margin-top: 12rem;
+  width: 55%;
+  color: var(--white);
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  padding: 2.5rem 2rem 2rem 2.8rem;
+  border: 1px solid var(--white);
+  outline: none;
+}
+
+section {
+  max-width: var(--box-width);
+  margin: auto;
+  margin-top: 10rem;
+  display: flex;
+}
+section .img-interactive {
+  background-image: url(/images/desktop/image-interactive.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 731px;
+  height: 500px;
+}
+section .txt-container {
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 50%;
+  background-color: var(--white);
+  font-size: 1rem;
+  margin-left: -8rem;
+  padding: 5rem 0 0 5rem;
+}
+section .txt-container .txt-h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+section .txt-container p {
+  margin-top: 1.5rem;
+  line-height: 1.3rem;
+}
+
+.grid-container {
+  display: grid;
+}
+
+/*# sourceMappingURL=layout.css.map */
