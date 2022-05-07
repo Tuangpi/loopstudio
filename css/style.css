@@ -20,6 +20,7 @@ body {
   font-family: "Josefin Sans", Alata, monospace;
   font-size: 15px;
   font-weight: 100;
+  position: relative;
 }
 
 nav {
@@ -30,38 +31,50 @@ nav {
   max-width: 100%;
   min-height: 90vh;
 }
-@media screen and (max-width: 799px) {
+@media all and (max-width: 756px) {
   nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(/images/mobile/image-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    max-height: 120vh;
   }
 }
-nav div {
-  max-width: var(--box-width);
+nav .nav-container {
+  width: var(--box-width);
   margin: auto;
 }
-nav div ul {
+@media all and (max-width: 7546px) {
+  nav .nav-container {
+    max-width: 90%;
+  }
+}
+nav .nav-container ul {
   font-family: Alata, monospace;
-  padding-top: 3rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: flex-end;
   column-gap: 1.5em;
   color: var(--white);
 }
 @media screen and (max-width: 799px) {
-  nav div ul {
+  nav .nav-container ul {
     column-gap: 1em;
   }
 }
-nav div ul .logo {
-  background-image: url(/images/logo.svg);
-}
-nav div ul li {
+nav .nav-container ul li {
   list-style: none;
   font-weight: 800;
   cursor: pointer;
   position: relative;
 }
-nav div ul li::after {
+@media screen and (max-width: 756px) {
+  nav .nav-container ul li {
+    display: none;
+  }
+}
+nav .nav-container ul li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -71,15 +84,55 @@ nav div ul li::after {
   background-color: var(--white);
   transition: all 200ms;
 }
-nav div ul li:hover::after {
+nav .nav-container ul li:hover::after {
   width: 60%;
 }
-nav div ul li:nth-of-type(1) {
+nav .nav-container ul li:nth-of-type(1) {
   margin-right: auto;
   width: 192px;
   height: 32px;
 }
-nav div .text-box {
+nav .nav-container ul .logo {
+  background-image: url(/images/logo.svg);
+}
+@media screen and (max-width: 756px) {
+  nav .nav-container ul .logo {
+    display: block;
+  }
+}
+nav .nav-container ul .humbergur {
+  display: none;
+}
+@media all and (max-width: 756px) {
+  nav .nav-container ul .humbergur {
+    display: block;
+    background-image: url(/images/icon-hamburger.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 16px;
+    display: none;
+    cursor: pointer;
+  }
+}
+nav .nav-container ul .close {
+  display: none;
+}
+@media all and (max-width: 756px) {
+  nav .nav-container ul .close {
+    display: block;
+    background-image: url(/images/icon-close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 16px;
+    display: block;
+    cursor: pointer;
+  }
+}
+nav .nav-container .text-box {
   margin-left: 0;
   margin-top: 6rem;
   max-width: 55%;
@@ -91,13 +144,34 @@ nav div .text-box {
   outline: none;
 }
 @media all and (max-width: 1040px) {
-  nav div .text-box {
+  nav .nav-container .text-box {
     font-size: 2.7em;
   }
 }
 @media all and (max-width: 799px) {
-  nav div .text-box {
+  nav .nav-container .text-box {
     font-size: 2.3em;
+  }
+}
+@media screen and (max-width: 756px) {
+  nav .nav-container .text-box {
+    margin: auto;
+    margin-top: 6rem;
+    max-width: 100%;
+  }
+}
+nav .black-modal {
+  display: none;
+}
+@media all and (max-width: 756px) {
+  nav .black-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: var(--black);
+    width: 100%;
+    min-height: 100%;
   }
 }
 
@@ -111,6 +185,7 @@ section {
   section {
     max-width: 90%;
     flex-direction: column;
+    margin-top: 4em;
   }
 }
 section .img-interactive {
