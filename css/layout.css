@@ -45,11 +45,20 @@ nav .nav-container ul {
     column-gap: 1em;
   }
 }
+@media screen and (max-width: 756px) {
+  nav .nav-container ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", Alata, monospace;
+    position: relative;
+  }
+}
 nav .nav-container ul li {
   list-style: none;
   font-weight: 800;
   cursor: pointer;
-  position: relative;
 }
 @media screen and (max-width: 756px) {
   nav .nav-container ul li {
@@ -62,7 +71,7 @@ nav .nav-container ul li::after {
   bottom: 0;
   left: calc(100% - 80%);
   width: 0%;
-  height: 0.1rem;
+  height: var(--height);
   background-color: var(--white);
   transition: all 200ms;
 }
@@ -80,6 +89,7 @@ nav .nav-container ul .logo {
 @media screen and (max-width: 756px) {
   nav .nav-container ul .logo {
     display: block;
+    margin-bottom: 3rem;
   }
 }
 nav .nav-container ul .humbergur {
@@ -94,7 +104,6 @@ nav .nav-container ul .humbergur {
     background-size: cover;
     width: 24px;
     height: 16px;
-    display: none;
     cursor: pointer;
   }
 }
@@ -103,14 +112,16 @@ nav .nav-container ul .close {
 }
 @media all and (max-width: 756px) {
   nav .nav-container ul .close {
-    display: block;
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    display: none;
     background-image: url(/images/icon-close.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 24px;
     height: 16px;
-    display: block;
     cursor: pointer;
   }
 }
@@ -150,7 +161,7 @@ nav .black-modal {
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
+    display: none;
     background-color: var(--black);
     width: 100%;
     min-height: 100%;
