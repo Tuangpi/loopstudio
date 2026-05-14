@@ -1,6 +1,6 @@
 # Frontend Mentor - Loopstudios landing page solution
 
-This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -28,9 +28,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://github.com/Tuangpi/loopstudio)
-- Live Site URL: [Add live site URL here](https://loopstudio.pages.dev/)
+- Live Site URL: [https://loopstudio.pages.dev](https://loopstudio.pages.dev/)
 
 ## My process
 
